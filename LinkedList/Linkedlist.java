@@ -72,6 +72,20 @@ public class Linkedlist {
         System.out.print("NULL");
     }
 
+    public int  iterativesearch(int data){
+        Node temp = head ;
+        int i=0;
+
+        while(head != null){
+            if(temp.data == data){
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         Linkedlist ll = new Linkedlist();
 
@@ -84,6 +98,9 @@ public class Linkedlist {
         ll.add(25, 2);
 
         printLinkedlist(head);
+        System.out.println();
+
+        System.out.println(ll.iterativesearch(1));
 
     }
 }
